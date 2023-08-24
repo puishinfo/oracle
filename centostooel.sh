@@ -10,7 +10,7 @@ set -e
 unset CDPATH
 
 yum_url=https://yum.oracle.com
-github_url=https://github.com/oracle/centos2ol/
+github_url=https://github.com/puishinfo/oracle/225b1b82958a46b3037848efc5e98f39e418f781/
 arch=$(uname -m)
 bad_packages=(centos-backgrounds centos-gpg-keys centos-logos centos-release centos-release-cr desktop-backgrounds-basic \
               centos-release-advanced-virtualization centos-release-ansible26 centos-release-ansible-27 \
@@ -420,7 +420,7 @@ done < repo_files
 
 # Disable the explicit distroverpkg as centos-release provides the correct value
 # for system-release(releasever).
-# See https://github.com/oracle/centos2ol/issues/53
+# See https://github.com/oracle//puishinfo/oracle/225b1b82958a46b3037848efc5e98f39e418f781/
 echo "Removing CentOS-specific yum configuration from /etc/yum.conf"
 sed -i.bak -e 's/^distroverpkg/#&/g' -e 's/^bugtracker_url/#&/g' /etc/yum.conf
 
